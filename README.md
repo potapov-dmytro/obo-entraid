@@ -78,7 +78,7 @@ Both steps use token URL `https://login.microsoftonline.com/<TENANT_ID>/oauth2/v
 | Identity Provider | `api://<CLIENT_ID>/access_as_user` | Client ID + client secret fields, **Request Token Use** `on_behalf_of`. **Request Token Type** must be **empty** (otherwise AADSTS70071; `saml2` gives AADSTS50107). With PowerShell 5.1 pass `'--idp-token-type='`. |
 | Application | `https://graph.microsoft.com/.default` | Client ID in the *Application Client ID* field; body fields `scope`, `client_secret` and `requested_token_use`. |
 
-The `content-type` header is not shown in the connection screen: set it with the ADK (`orchestrate connections configure … --idp-token-header … --app-token-header …`, run for `--env draft` and `--env live`).
+The `content-type` header is not shown in the connection screen: set it with the ADK (`orchestrate connections configure … --idp-token-header … --app-token-header …`, run for `--env draft` and `--env live`). The complete ADK script is in [ON-BEHALF-OF-FLOW-ENTRA-ID.md](ON-BEHALF-OF-FLOW-ENTRA-ID.md).
 
 Use `/debug` to check that these exact requests succeed with your app registration.
 
