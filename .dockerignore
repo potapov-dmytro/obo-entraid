@@ -1,0 +1,11 @@
+.env
+.env.*
+.venv/
+venv/
+__pycache__/
+*.pyc
+.git/
+*.md
+logs/
+*.bak*
+deploy-to-code-engine.*
